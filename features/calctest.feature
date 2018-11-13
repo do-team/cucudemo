@@ -11,3 +11,14 @@ Feature: Does calculator works?
       | 100 |         5 |    105 |
       |  99 |      1234 |   1333 |
       |  12 |         5 |     17 |
+
+  Scenario Outline: multiplication test
+    Given a variable set to <var>
+    When I multiply the variable by <mult>
+    Then variable should contain <result>
+    
+    Examples:
+      | var |   mult    | result |
+      | 100 |         5 |    500 |
+      |   9 |         5 |     45 |
+      |  12 |         2 |     24 |
