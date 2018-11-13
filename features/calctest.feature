@@ -15,7 +15,7 @@ Feature: Does calculator works?
   Scenario Outline: multiplication test
     Given a variable set to <var>
     When I multiply the variable by <mult>
-    Then variable should contain <result>
+    Then the variable should contain <result>
     
     Examples:
       | var |   mult    | result |
