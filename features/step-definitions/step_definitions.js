@@ -9,6 +9,10 @@ function isItFriday(today) {
   }
 }
 
+function addition(first, second) {
+  return first + second;
+}
+
 Given('today is Friday', function () {
   this.today = 'Friday';
 });
