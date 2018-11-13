@@ -24,3 +24,15 @@ When('I ask whether it\'s Friday yet', function () {
 Then('I should be told {string}', function (expectedAnswer) {
   assert.equal(this.actualAnswer, expectedAnswer);
 });
+
+Given('a variable set to {int}', function (int) {
+  this.variable = int;
+});
+
+When('I increment the variable by {int}', function (increment) {
+  this.actualResult = addition(this.variable, increment);
+});
+
+Then('the variable should contain {int}', function (expectedResult) {
+  assert.equal(this.actualResult, expectedResult);
+});
