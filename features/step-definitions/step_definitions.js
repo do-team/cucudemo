@@ -40,3 +40,7 @@ When('I increment the variable by {int}', function (increment) {
 Then('the variable should contain {int}', function (expectedResult) {
   assert.equal(this.actualResult, expectedResult);
 });
+
+When('I multiply the variable by {int}', function (multiplier) {
+  this.actualResult = multiplication(this.variable, multiplier)
+});
